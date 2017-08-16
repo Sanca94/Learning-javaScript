@@ -1,0 +1,66 @@
+Data Types: building blocks of javascript.
+String: Any grouping of words or numbers surrounded by single quotes: ' ... ' or double quotes " ... ".
+Number:Any number, including numbers with decimals, without quotes: 4, 8, 1516, 23.42.
+Boolean:This is always one of two words. Either true or false, with no quotations.
+javascript Talk(print): console.log('dcsscee', 'ssefsf');
+Operators: 1.Add:+ 2.Subtract:- 3.Multiply:* 4.Divide:/ 5.Modulus:% 6.Less than:< 7.Greater than:> 8.Less than or equal to:<= 9.Greater than or equal to:>= 10.if two things equal: === 11.if two things do not equal:!==
+Modulus: to show you the remainder after you divide a number.
+Math.random(); : 0 - 1.
+Math.random() * 50); : 0 - 50.
+Math.floor(Math.random() * 50); : no decimal ETC..
+// single line comment
+/* multiple line comment */
+Create a Variable: Var.
+Create a Variable thing: myName in camelCase.
+Create a variable next thing: = means to assign whatever to next variable.
+Create a Variable next thing name: 'name' is asinged to the variable in camelCase.
+interpolation: Putting a variable in a string using operators.
+[var myPet = 'armadillo';
+console.log('I own a pet ' + myPet + '.'); 
+// Output: 'I own a pet armadillo.']
+control flow: Making Decisions with code.
+if/else Statements: if true else false.
+Blocks: code in between curly braces.
+else if Statements: a question that has multiple yes conditions, or multiple no conditions.
+logical operators: "both must be true," we can use &&. "either can be true," we can use ||. this is the opposite of what it really is," we can use !.these should not be equal to each other," we can use !==.
+switch Statements: To a computer, a switch statement and an if/else statement are the same, but a switch statement can be easier for other humans to read [if turns to switch, and else turns to case encompassed in one big bracket.
+Functions:
+Parameters: variables that we can set when we call the function, within the parentheses.
+Return: use in a function to get a result When functions their value, we can use them together and inside one another.
+Scope:the idea in programming that some variables are acessible/inaccessible from other parts of the program.
+Global Scope: refers to variables that are accessible to every part of the program.
+Functional Scope: refers to variables created inside functions, which are not accessible outside of its block.
+Arrays: ['trgr','rhrth','fbrt'] each item is stored starting from 0.
+zero-indexed:
+.length:We can attach this to any variable holding an array and it will return the number of items inside.
+push(): adds items to an array.
+pop(): adds items to an array and deletes old items.
+loops: for and while.
+for loops: let us loop a block of code a known amount of times.
+While loops: let us loop a block of code an unknown amount of times.
+start condition: var i = 0; it means the loop will start counting at 0.
+stop condition: i < variable.length; .
+iterator: i++.
+{ ... }: will run each loop until it stops.
+Document Object Model (DOM): term for elements in an HTML file. 
+
+EloquentJS book
+Chapter 1
+Values: six basic types - numbers,strings,Booleans,objects,functions,and undefined values.
+Numbers: structures as just numbers, the main thing for use is arithmetic.
+Special Number:  Infinity -Infinity and NaN(not a number).
+Strings: used to represent text.
+binary Operators:Operators that use two values
+Unary Operators:Operators that use one value.
+Boolean Values: true false
+And, Or, and Not: &&  ||  !.
+Conditional Operator: ? and a #er:#er.
+Undefined Values: null and undefined.
+type coercion:
+
+
+
+
+
+
+

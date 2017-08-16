@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning JS</title>
+</head>
+<body>
+	<script>
+	//Expressions and Statements
+	//Expression to stentence fragment as statment is to full sentence
+
+	//example of a simple(useless) program
+
+	/*1;
+	!false;*/
+
+	//Side effects:A statement stands on its own and amounts to something only if it affects the world, Showing a dialog box or writing text to the screen.
+	//Variables: catchs and holds values.
+
+	/*var caught = 5 * 5;
+
+	var ten = 10;
+	console.log(ten * ten);
+
+	var mood = "light";
+	console.log(mood);
+
+	//this next line overrides the value of the variable
+
+	mood = "dark";
+	console.log(mood);
+
+	//variables as tentacles(or axon)
+
+	var luigisDebt = 140;
+	luigisDebt = luigisDebt - 35;
+	console.log(luigisDebt);
+
+	//defining multiple variables on one line ( however never space/neat )
+
+	var one = 1, two = 2;
+	console.log(one + two); */
+
+	/*key words(might be a problem when a variable definition does not work as expected.. do not use to name variables: break case catch class const continue debugger
+default delete do else enum export extends false
+finally for function if implements import in
+instanceof interface let new null package private
+protected public return static super switch this
+throw true try typeof var void while with yield */
+
+	//Environment: collection of variables and their values that exist at a given time.
+	//Function: is a piece of a program wrapped in a value,when a function produces a value it is said to return that value.
+	//Executing a function: invoking, calling, or applying
+
+	//alert('good morning!');
+
+	//Arguments: values given to functions.
+
+	/*var x = 30;
+	console.log('the value of x is', x);
+
+	console.log(Math.max(2, 4));
+	// output will be 4..opposite next line + 100 so output will be 102
+	console.log(Math.min(2, 4) + 100); */
+
+
+	//confirm: is a boolean true if yes false if no
+
+	//confirm('Shall we, then?');
+
+	//prompt: asking an open question with an input box.
+
+	//prompt('Tell me everything you know.', '...');
+
+	//Control Flow: 
+
+
+	//var theNumber = Number(prompt('Pick a number', ''));
+	//alert("Your number is the square root of " + theNumber * theNumber);
+
+	//conditional execution: choosing two different routes based on a boolean value
+
+	//if you enter cheese no output will be shown
+	//var theNumber = Number(prompt('Pick a number', ''));
+	//if (!isNaN(theNumber))
+	//alert('Your number is the sqaure root of ' + theNumber * theNumber);
+
+	/*var theNumber = Number(prompt('Pick a number', ''));
+	if (!isNaN(theNumber))
+		alert('Your number is the sqaure root of ' + theNumber * theNumber);
+	else
+		alert('Hey. why didnt\'t you give me a number?');*/
+
+	/*var num = Number(prompt('Pick a number', '0'));
+
+	if (num < 10)
+		alert('Small');
+	else if (num < 100)
+		alert('Medium');
+	else
+		alert('Large');*/
+
+	//While and Do Loops: 
+
+
+	/*var number = 0;
+	while (number <= 12) {
+		console.log(number);
+		number = number + 2;
+	}*/
+
+
+	//block: a sequence of statements wrapped in braces
+
+	/*var result = 1;
+	var counter = 0;
+	while (counter < 10) {
+		result = result * 2;
+		counter = counter + 1;
+	}
+	console.log(result);*/
+
+	//do loop: always executes its body at least once, and starts testing whether it should stop only after that first execution
+
+	/*do {
+		var yourName = prompt('Who are you?');
+	} while (!yourName);
+	console.log(yourName);*/
+
+	//Indenting code
+
+	//For Loops:
+
+	/*for (var number = 0; number <=12; number = number + 2)
+		console.log(number);*/
+
+	/*var result = 1;
+	for (var counter = 0; counter < 10; counter = counter + 1)
+		result = result * 2;
+	console.log(result);
+
+
+	//breaking out of a loop
+
+	for(var current = 20; ; current++) {
+		if (current % 7 == 0)
+			break;
+	}
+	console.log(current);*/
+
+
+	//common for code to look like this
+
+	/*if (variable == "value1") action1();
+	else if (variable == "value2") action2();
+	else if (variable == "value3") action3();
+	else defaultAction();*/
+
+	//switch construct makes it look like this
+
+	/*switch (prompt('what is the weather like?')) {
+		case "rainy":
+			console.log("Remember to bring an umbrella.");
+		break;
+		case "sunny":
+			console.log('Dress lightly.');
+		case "cloudy":
+			console.log('Go outside.');
+			break;
+		default:
+			console.log('Unkown Weather Type!');
+			break;
+	}*/
+
+	//// for ([initialization]; [condition]; [final-expression])
+
+	//Looping a Triangle
+	for (var hash = '#'; hash.length <= 7; hash += '#')
+		console.log(hash);
+
+
+	//FizzBuzz
+	for (var i = 1; i <= 100; i++) {
+		if (i % 3 === 0 && i % 5 === 0){
+			console.log('FizzBuzz');
+		} else if (i % 3 === 0) {
+			console.log('fizz');
+		} else if (i % 5 === 0) {
+			console.log('Buzz');
+		} else {
+			console.log(i);
+		}
+
+	}
+
+	//Chess Board
+	var size = 8;
+
+	var board = '';
+
+	for (var y = 0; y < size; y++) {
+		for(var x = 0; x < size; x++) {
+			if ((x+y) % 2 == 0)
+				board += ' ';
+			else
+				board += '#';
+		}
+		board += '\n';
+	}
+	console.log(board);
+	
+
+
+	</script>
+</body>
+</html>
