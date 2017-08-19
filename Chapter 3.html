@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning JS</title>
+</head>
+<body>
+	<script>
+
+	//functions: concept of wrapping a piece of program in a value.
+
+	//defining functions
+	/*var square = function(x) {
+		return x * x;
+	};
+
+	console.log(square(12));*/
+
+	//parameters: ()
+	//body: {}
+
+	/*var makeNoise = function() {
+		console.log('Pling!');
+	}
+	makeNoise();*/
+
+
+	//function with a parameter
+	/*var power = function(base, exponent) {
+		var result = 1;
+		for (var count = 0; count < exponent; count++)
+			result *= base;
+		return result;
+	};
+
+	console.log(power(2, 10));*/
+
+	//return statement 
+
+	//parameters and scopes
+	//caller: 
+	//local: Variables declared inside of any function
+	//global: Variables declared outside of any function
+
+	/*var x = 'outside';
+
+	var f1 = function() {
+		var x = 'inside f1';
+	};
+	f1();
+	console.log(x);*/
+
+	/*var f2 = function() {
+		x = 'inside f2';
+	};
+	f2();
+	console.log(x);*/
+
+	//nested scope
+
+	/*var landscape = function() {
+		var result = "";
+		var flat = function(size) {
+			for (var count = 0; count < size; count++)
+				result += "_";
+		};
+		var mountain = function(size) {
+			result += "/";
+			for (var count = 0; count < size; count++)
+				result += "'";
+			result += "\\";
+		};
+
+		flat(3);
+		mountain(4);
+		flat(6);
+		mountain(1);
+		flat(1);
+		return result;
+
+	};*/
+
+
+	/*function potato(type) {
+		if ( type === 'sweet') {
+			console.log('I\'m a sweet potato boi');
+		} else {
+			console.log('I\'m not sweet sweet boi');
+		}
+
+	}
+	potato('sweet');
+	potato('Idaho');*/
+
+	//lexical scoping: ll variables from blocks around a function’s definition are visible—meaning both those in function bodies that enclose it and those at the top level of the program.
+
+	/*console.log("The future says:", future());
+
+	function future() {
+		return "we STILL have no flying cars.";
+	}*/
+
+	/*function example() {
+		function a() {} // okay to do
+		if (something) {
+			function b() {} // Danger dont do it!
+		}
+	}*/
+
+	//call stack:
+
+	/*function greet(who) {
+		console.log("Hello " + who);
+	}
+	greet("Harry");
+	console.log("Bye");*/
+
+	/*function chicken() {
+		return egg();
+	}
+	function egg() {
+		return chicken();
+	}
+	console.log(chicken() + ' came first.');*/
+
+	//Optional Arguments
+
+	/*function power(base, exponent) {
+		if (exponent == undefined) 
+			exponent = 2;
+		var result = 1;
+		for (var count = 0; count < exponent; count++)
+			result *= base;
+		return result;
+	}
+
+	console.log(power(4));
+
+	console.log(power(4, 3));*/
+
+	//closure: being able to reference a specific instance of local variables in an enclosing function
+
+	/*function wrapValue(n) {
+		var localVariable = n;
+		return function() { return localVariable; };
+	}
+
+	var wrap1 = wrapValue(1);
+	var wrap2 = wrapValue(2);
+	console.log(wrap1());
+
+	console.log(wrap2());*/
+
+	/*function multiplier(factor) {
+		return function(number) {
+			return number * factor;
+		};
+	}
+
+	var twice = multiplier (2);
+	console.log(twice(5));*/
+
+	//recursive: a function that calls itself
+
+	/*function power(base, exponent) {
+		if (exponent == 0)
+			return 1;
+		else
+			return base * power(base, exponent - 1);
+	}
+
+	console.log(power(2, 3));*/
+
+	//Recursive 
+
+	/*function findSolution(target) {
+		function find(current, history) {
+			if (current === target)
+				return history;
+			else if (current > target)
+				return null;
+			else
+				return find(current + 5, "(" + history + " + 5)") || find(current * 3, "(" + history + " * 3");
+		}
+		return find(1, "1");
+	}
+
+	console.log(findSolution(24));*/
+
+	/*function printFarmInventory(cows, chickens) {
+		var cowString = String(cows);
+		while (cowString.length < 3)
+			cowString = "0" + cowString;
+		console.log(cowString + " Cows");
+		var chickenString = String(chickens);
+		while (chickenString.lenght < 3)
+			chickenString = "0" +chickenString;
+		console.log(chickenString + " Chickens");
+	}
+	printFarmInventory(7, 11);*/
+
+	/*function printZeroPaddedWithLabel(number, label) {
+		var numberString = String(number);
+		while (numberString.length < 3)
+			numberString = "0" + numberString;
+		console.log(numberString + " " + label);
+	}
+
+	function printFarmInventory(cows, chickens, pigs) {
+		printZeroPaddedWithLabel(cows, "Cows");
+		printZeroPaddedWithLabel(chickens, "Chickens");
+		printZeroPaddedWithLabel(pigs, "Pigs");
+	}
+
+	printFarmInventory(7, 11, 3);*/
+
+
+	/*function zeroPad(number, width) {
+		var string = String(number);
+		while (string.length < width)
+			string = "0" + string;
+		return string;
+	}
+
+	function printFarmInventory(cows, chickens, pigs) {
+		console.log(zeroPad(cows, 3) + " Cows");
+		console.log(zeroPad(chickens, 3) + " Chickens");
+		console.log(zeroPad(pigs, 3) + " Pigs");
+	}
+
+	printFarmInventory(7, 16, 3);*/
+
+	//Minimum
+
+	function min(a, b) {
+		if ( a < b)
+			return a;
+		else ( b < a);
+			return b;
+	}
+
+	console.log(min(0, 10));
+	console.log(min(0, -10));
+
+	//Recursion
+
+	function isEven(number) {
+		if (number < 0) {
+			return isEven(-number);
+		} else if (number == 1) {
+			return false;
+		} else if (number == 0) {
+			return true;
+		} else {
+			return isEven(number - 2);
+		}
+	}
+
+	console.log(isEven(50));
+
+	console.log(isEven(75));
+
+	console.log(isEven(-1));
+
+	//Bean Counting
+
+	function countBs(str) {
+		var count = 0;
+		for (var i = 0; i < str.length; i++) {
+			if (str.charAt(i) === 'B') {
+				count++;
+			};
+		};
+		return (count); // return outside of for loop
+	}
+
+	function countChar(str, char) {
+		var count = 0;
+		for (var i = 0; i < str.length; i++) {
+			if (str.charAt(i) === char) { //use the variable char instead of the string "char"
+				count++;
+
+			}
+		}
+			return (count); // return outside of the for loop
+	}
+
+	console.log(countBs('BBBBBBBC'));
+
+	console.log(countBs("BBC"));
+
+    console.log(countChar("kakkerlak", "k"));
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
